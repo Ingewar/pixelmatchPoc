@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio wdio.conf.js"
+    "test": "npx wdio wdio.conf.js",
+    "selenium": "wdio-selenium-standalone-service"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@wdio/cli": "^5.10.7",
-    "pixelmatch": "^5.0.2"
+    "pixelmatch": "^5.0.2",
+    "wdio-selenium-standalone-service": "0.0.12"
   },
   "devDependencies": {
     "@wdio/local-runner": "^5.10.7",
