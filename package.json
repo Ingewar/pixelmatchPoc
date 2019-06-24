@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx wdio wdio.conf.js",
-    "selenium": "wdio-selenium-standalone-service"
+    "selenium": "docker run -it -p 4444:4444 vvoyer/selenium-standalone"
   },
   "author": "",
   "license": "ISC",
