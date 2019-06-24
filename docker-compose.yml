@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  testrunner:
+    environment:
+      - GRID_URL=http://seleniumhub:4444/wd/hub
+    build: .
+    user: $USER_ID
+    volumes:
+       - ./images:/code/images
+       - ./output:/code/output
+    depends_on:
+       - seleniumhub
+    command: sh -c "./wait-for seleniumhub:4444 -- npm test"
+  seleniumhub:
+    image: "vvoyer/selenium-standalone"
+    shm_size: '256mb'
+    ports:
+      - "4444:4444"

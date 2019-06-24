@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx wdio wdio.conf.js",
-    "selenium": "docker run -it -p 4444:4444 vvoyer/selenium-standalone"
+    "selenium": "docker run -it -p 4444:4444 vvoyer/selenium-standalone",
+    "test:docker": "docker-compose up --build --abort-on-container-exit"
   },
   "author": "",
   "license": "ISC",

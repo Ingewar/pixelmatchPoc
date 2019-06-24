@@ -9,6 +9,7 @@ exports.config = {
     runner: 'local',
     //
     // Override default path ('/wd/hub') for chromedriver service.
+    hostname: 'seleniumhub',
     path: '/wd/hub',
     //
     // ==================
@@ -101,7 +102,7 @@ exports.config = {
     connectionRetryTimeout: 90000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount: 1,
     //
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
